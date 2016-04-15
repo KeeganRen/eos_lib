@@ -59,10 +59,10 @@ int main(int argc, char *argv[])
 		po::options_description desc("Allowed options");
 		desc.add_options()
             ("help,h", "display the help message")
-            ("model,m", po::value<fs::path>(&modelfile)->required()->default_value("../share/sfm_shape_3448.bin"), "a Morphable Model stored as cereal BinaryArchive")
+            ("model,m", po::value<fs::path>(&modelfile)->required()->default_value("../model/share/sfm_shape_3448.bin"), "a Morphable Model stored as cereal BinaryArchive")
             ("image,i", po::value<fs::path>(&imagefile)->required()->default_value("data/image_0010.png"), "an input image")
             ("landmarks,l", po::value<fs::path>(&landmarksfile)->required()->default_value("data/image_0010.pts"), "2D landmarks for the image, in ibug .pts format")
-            ("mapping,p", po::value<fs::path>(&mappingsfile)->required()->default_value("../share/ibug2did.txt"), "landmark identifier to model vertex number mapping")
+            ("mapping,p", po::value<fs::path>(&mappingsfile)->required()->default_value("../model/share/ibug2did.txt"), "landmark identifier to model vertex number mapping")
             ("outputfilename,o", po::value<fs::path>(&outputfilename)->required()->default_value("out_fuck.obj"), "basename for the output rendering and obj files")
             ("outputfilepath,o", po::value<fs::path>(&outputfilepath)->required()->default_value("data/"), "basename for the output rendering and obj files")
             ;
